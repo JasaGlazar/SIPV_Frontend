@@ -13,7 +13,7 @@
             </StackLayout>
 
             <!--zaenkrat image da se popravi realna mapa-->
-            <Image Source="Resources/Images/googlemaps.png"/>
+            <ImageButton Source="Resources/Images/googlemaps.png" Clicked="ShowPopupButton_Clicked" Aspect="AspectFill"/>
 
         </VerticalStackLayout>
     </VerticalStackLayout>

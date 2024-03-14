@@ -4,9 +4,14 @@
              x:Class="SIPV_Frontend.Views.LocationPage"
              >
     <VerticalStackLayout>
-        <Label 
-            Text="Location page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <VerticalStackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Frame CornerRadius="16" BorderColor="Black" Padding="5" HasShadow="False" Margin="10">
+                    <Entry Placeholder="Search..."  WidthRequest="350" MaximumWidthRequest="500"/>
+                </Frame>
+            </StackLayout>
+
+
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

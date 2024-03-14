@@ -52,6 +52,7 @@
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\location.png" />
 	  <None Remove="Resources\Images\profile.png" />
+	  <None Remove="Resources\Images\traffic.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -62,6 +63,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TrafficPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

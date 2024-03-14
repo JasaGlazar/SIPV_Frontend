@@ -7,17 +7,22 @@
      xmlns:views="clr-namespace:SIPV_Frontend.Views"
     Shell.FlyoutBehavior="Disabled" TabBarBackgroundColor="#122b4d" TabBarUnselectedColor="#cf9f5c" TabBarTitleColor="White">
     <TabBar>
+        <Tab Title="Home"
+            Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+        </Tab>
         <Tab Title="Location"
             Icon="location.png">
             <ShellContent ContentTemplate="{DataTemplate views:LocationPage}" />
         </Tab>
-        <Tab Title="Home"
-            Icon="home.png">
-            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+        <Tab Title="Traffic news"
+            Icon="traffic.png">
+            <ShellContent ContentTemplate="{DataTemplate views:TrafficPage}" />
         </Tab>
         <Tab Title="Profile"
             Icon="profile.png">
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}" />
         </Tab>
+
     </TabBar>
 </Shell>

@@ -74,4 +74,12 @@ public partial class ProfilePage : ContentPage
             profile_picture.Source = filePath;
         }
     }
+
+
+    private async void statistics_btn_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Statistics());
+    }
+
+
 }

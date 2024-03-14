@@ -55,7 +55,7 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="settingsTabButton" Text="Settings" Grid.Column="0" HorizontalOptions="Center" BackgroundColor="#122b4d" TextColor="#cf9f5c" Clicked="SettingsTabButton_Clicked"/>
-            <Button x:Name="historyTabButton" Text="History" Grid.Column="1" HorizontalOptions="Center" BackgroundColor="#122b4d" TextColor="#cf9f5c" Clicked="HistoryTabButton_Clicked"/>
+            <Button x:Name="historyTabButton" Text="Statistics" Grid.Column="1" HorizontalOptions="Center" BackgroundColor="#122b4d" TextColor="#cf9f5c" Clicked="statistics_btn_Clicked"/>
         </Grid>
 
         <!-- Button to return from settings or history -->

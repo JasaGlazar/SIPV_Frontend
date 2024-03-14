@@ -1,4 +1,5 @@
-﻿namespace SIPV_Frontend;
+﻿using Microcharts.Maui;
+namespace SIPV_Frontend;
 
 public static class MauiProgram
 {
@@ -7,12 +8,13 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
+            .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			})
-			.UseMauiMaps();
+			.UseMauiMaps()
+			.UseMicrocharts();
 
 		return builder.Build();
 	}

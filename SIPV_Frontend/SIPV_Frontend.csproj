@@ -60,7 +60,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Microcharts.Maui" Version="1.0.0" />
 	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.10" />
+	  <PackageReference Include="OxyPlot.Core" Version="2.1.2" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -80,6 +82,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="RegistrationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Statistics.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="TrafficPage.xaml">

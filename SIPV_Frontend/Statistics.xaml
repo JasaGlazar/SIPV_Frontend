@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SIPV_Frontend.Statistics"
+             xmlns:charts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             Title="Statistics">
+
+
+
+
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <!-- New row definition for the text "User" -->
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <!-- New row definition for the text "Day in a week" -->
+                <RowDefinition Height="*"/>
+                <!-- New row definition for myChartView -->
+                <RowDefinition Height="Auto"/>
+                <!-- New row definition for the text "fuel" -->
+                <RowDefinition Height="*"/>
+                <!-- New row definition for the third chart -->
+            </Grid.RowDefinitions>
+
+            <!-- First row: myChartView2 and circle -->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Left side: Black circle with margin -->
+                <BoxView Color="#122b4d" WidthRequest="100" HeightRequest="100" CornerRadius="75" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Margin="0,0,50,0"/>
+
+
+                <!-- Right side: myChartView2 -->
+                <charts:ChartView x:Name="myChartView2" Grid.Column="1"  HeightRequest="200" WidthRequest="180" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+
+            <!-- Second row: Text label "User" -->
+            <Label Grid.Row="1" Text="User" HorizontalOptions="Start" VerticalOptions="Center" Margin="85,0,0,0"/>
+
+            <!-- Third row: Empty space -->
+            
+            <!-- Adjust height as needed -->
+
+            <!-- Fourth row: Text label "Day in a week" -->
+            <Label Grid.Row="3" Text="Day in a week" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,0"/>
+
+            <!-- Fifth row: myChartView -->
+            <charts:ChartView x:Name="myChartView" Grid.Row="4" HeightRequest="100"/>
+
+            <!-- Sixth row: Text label "fuel" -->
+            <Label Grid.Row="5" Text="fuel" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,0"/>
+
+            <!-- Seventh row: Third chart -->
+            <charts:ChartView x:Name="myChartView3" Grid.Row="6" HeightRequest="100"/>
+        </Grid>
+    </ScrollView>
+
+
+
+
+</ContentPage>

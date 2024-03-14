@@ -3,10 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SIPV_Frontend.Views.ProfilePage"
              >
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White">
         <Label 
-            Text="Profile page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        Text="Profile page"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center"
+        TextColor="#cf9f5c"/>
+
+        <Grid VerticalOptions="StartAndExpand">
+            <Border WidthRequest="120" 
+                HeightRequest="120"  
+                Margin="50,50,50,20"
+                BackgroundColor="#122b4d"
+                StrokeShape="RoundRectangle 500">
+                <Image x:Name="profile_picture" Aspect="AspectFill" Clip="Ellipse">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="edit_ProfilePic_btn_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Border>
+
+            <ImageButton x:Name="edit_ProfilePic_btn" Source="edit.png" WidthRequest="36" HeightRequest="36" Margin="200,50,15,20" CornerRadius="15" Aspect="Center" Padding="2" Clicked="edit_ProfilePic_btn_Clicked"/>
+        </Grid>
+
+        <!-- Settings section -->
+        <StackLayout x:Name="settingsLayout" IsVisible="False" VerticalOptions="CenterAndExpand" Orientation="Vertical" Spacing="10">
+            <!-- First setting with toggle button -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Setting 1" TextColor="#cf9f5c" />
+                <Switch x:Name="setting1Switch" IsToggled="{Binding IsSetting1Enabled}" />
+            </StackLayout>
+
+            <!-- Second setting with toggle button -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Setting 2" TextColor="#cf9f5c" />
+                <Switch x:Name="setting2Switch" IsToggled="{Binding IsSetting2Enabled}" />
+            </StackLayout>
+
+            <!-- Third setting with toggle button -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Setting 3" TextColor="#cf9f5c" />
+                <Switch x:Name="setting3Switch" IsToggled="{Binding IsSetting3Enabled}" />
+            </StackLayout>
+        </StackLayout>
+
+        <!-- Adding two tabs -->
+        <Grid x:Name="tabsGrid" VerticalOptions="CenterAndExpand" IsVisible="true">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="settingsTabButton" Text="Settings" Grid.Column="0" HorizontalOptions="Center" BackgroundColor="#122b4d" TextColor="#cf9f5c" Clicked="SettingsTabButton_Clicked"/>
+            <Button x:Name="historyTabButton" Text="History" Grid.Column="1" HorizontalOptions="Center" BackgroundColor="#122b4d" TextColor="#cf9f5c" Clicked="HistoryTabButton_Clicked"/>
+        </Grid>
+
+        <!-- Button to return from settings or history -->
+        <Button Text="Return" Clicked="ReturnButton_Clicked" HorizontalOptions="Center" BackgroundColor="#122b4d" TextColor="#cf9f5c" Margin="0,20,0,0" />
     </VerticalStackLayout>
 </ContentPage>

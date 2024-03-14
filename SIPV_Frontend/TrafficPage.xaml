@@ -3,10 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SIPV_Frontend.Views.TrafficPage"
              >
-    <VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border BackgroundColor="#122b4d"></Border>
         <Label 
-            Text="Traffic page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            Text="Traffic updates"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand" 
+            Margin="10"
+            FontAttributes="Bold" 
+            FontSize="20"
+            TextColor="#cf9f5c"
+            />
+        
+
+        <ScrollView Grid.Row="1">
+            <CollectionView x:Name="news_collection" Margin="10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="#122b4d" BackgroundColor="White" Margin="0,5,0,5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label x:Name="news_date_lbl" FontAttributes="Italic" FontSize="Small" Text="{Binding news_date}"></Label>
+                                <Label x:Name="news_title_lbl" Grid.Row="1" FontAttributes="Bold" FontSize="Title" Text="{Binding title}"></Label>
+                                <Label x:Name="news_description_lbl" Grid.Row="2" FontSize="Subtitle" LineBreakMode="WordWrap" Text="{Binding news_description}"></Label>
+                                <Image x:Name="news_img" Grid.Column="1" Grid.RowSpan="3" Margin="15" Source="{Binding picture_url}"></Image>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        
+    </Grid>
 </ContentPage>

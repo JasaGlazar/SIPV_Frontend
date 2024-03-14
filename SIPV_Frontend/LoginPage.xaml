@@ -20,7 +20,7 @@
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>
-            <Button x:Name="prijava_btn" Text="Prijava" BackgroundColor="#122b4d" TextColor="#cf9f5c" Margin="80,25,80,10" CornerRadius="10"></Button>
+            <Button x:Name="prijava_btn" Clicked="prijava_btn_Clicked" Text="Prijava" BackgroundColor="#122b4d" TextColor="#cf9f5c" Margin="80,25,80,10" CornerRadius="10"></Button>
             <Label x:Name="zunanjeStoritve" Text="Prijava z zunanjimi storitvami" TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center" Margin="80,30,80,10"></Label>
             
             <HorizontalStackLayout HorizontalOptions="Center">

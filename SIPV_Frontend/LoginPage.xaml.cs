@@ -11,4 +11,10 @@ public partial class LoginPage : ContentPage
     {
         await Navigation.PushModalAsync(new RegistrationPage());
     }
+
+    //Samo klikneš na Prijava gumb pa te vrže not
+    private async void prijava_btn_Clicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new AppShell());
+    }
 }

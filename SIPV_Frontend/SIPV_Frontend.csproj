@@ -49,8 +49,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\apple.png" />
+	  <None Remove="Resources\Images\Facebook.png" />
+	  <None Remove="Resources\Images\google.png" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\location.png" />
+	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\profile.png" />
 	  <None Remove="Resources\Images\traffic.png" />
 	</ItemGroup>
@@ -62,12 +66,24 @@
 	  <MauiXaml Update="LocationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RegistrationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="TrafficPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\uporabniki.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>
